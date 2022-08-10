@@ -1,5 +1,5 @@
 <script setup>
-const open = useState("open", () => false);
+const open = useState("open", () => true);
 </script>
 
 <template>
