@@ -1,0 +1,1 @@
+# Test automatisés des composants

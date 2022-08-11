@@ -12,6 +12,7 @@ const open = useState("open");
         class="flex flex-row flex-nowrap w-full justify-between items-center"
       >
         <ThemeToggle />
+        <Logo />
         <MenuToggle />
       </div>
 

@@ -1,12 +1,9 @@
 <script setup>
-const open = useState("open");
 const props = defineProps(["link"]);
 const isSubMenuOpen = ref(false);
 
 function itemClicked(l) {
-  return l.children
-    ? (isSubMenuOpen.value = !isSubMenuOpen.value)
-    : (open.value = false);
+  if (l.children) isSubMenuOpen.value = !isSubMenuOpen.value;
 }
 
 function genLinkPath(l) {
@@ -17,7 +14,7 @@ function genLinkPath(l) {
 <template>
   <li class="flex flex-col gap-y-2" :class="{ '': isSubMenuOpen }">
     <NuxtLink
-      class="py-2 block w-full flex flex-row items-center gap-x-2 cursor-default lg:cursor-pointer"
+      class="py-2 block w-full flex flex-row items-center gap-x-2"
       :to="genLinkPath(link)"
       @click="itemClicked(link)"
     >
