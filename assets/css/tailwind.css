@@ -17,7 +17,7 @@
   }
 
   .link {
-    @apply border-b border-blue text-blue;
+    @apply border-b border-blue text-blue inline-block;
   }
 
   h1 {

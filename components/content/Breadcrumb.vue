@@ -1,7 +1,7 @@
 <script setup>
 const route = useRoute();
 const links = ref(route.fullPath.split("/"));
-
+// TODO breadcrumbs que en mode ordi, mobile montrer un bouton retour ariere
 function capitalize(word) {
   return word.charAt(0).toUpperCase() + word.slice(1);
 }
