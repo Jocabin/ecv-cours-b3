@@ -3,7 +3,9 @@ const props = defineProps(["link"]);
 const isSubMenuOpen = ref(false);
 
 function itemClicked(l) {
-  if (l.children) isSubMenuOpen.value = !isSubMenuOpen.value;
+  return l.children
+    ? (isSubMenuOpen.value = !isSubMenuOpen.value)
+    : (useState("open").value = false);
 }
 
 function genLinkPath(l) {
@@ -46,7 +48,7 @@ function genLinkPath(l) {
         <NuxtLink
           class="py-2 block w-full flex flex-row items-center"
           :to="subLink._path"
-          @click="itemClicked(subLink)"
+          @click="useState('open').value = false"
         >
           {{ subLink.title }}
         </NuxtLink>
