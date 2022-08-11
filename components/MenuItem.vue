@@ -17,7 +17,7 @@ function genLinkPath(l) {
 <template>
   <li class="flex flex-col gap-y-2" :class="{ '': isSubMenuOpen }">
     <NuxtLink
-      class="py-2 block w-full flex flex-row items-center gap-x-2"
+      class="py-2 block w-full flex flex-row items-center gap-x-2 cursor-default lg:cursor-pointer"
       :to="genLinkPath(link)"
       @click="itemClicked(link)"
     >

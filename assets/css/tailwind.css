@@ -11,6 +11,11 @@
     @apply min-h-screen pt-16 flex flex-col justify-between items-center dark:bg-black bg-white;
   }
 
+  a,
+  button {
+    @apply cursor-default lg:cursor-pointer;
+  }
+
   h1 {
     @apply font-bold text-3xl mb-4;
   }

@@ -1,3 +1,3 @@
 # Titre dev
 
-:lesson-list{path="/technologique"}
+:lesson-list{path="/technologique/\_dev"}

@@ -5,7 +5,9 @@ const props = defineProps(["path"]);
 <template>
   <div class="">
     <ContentList :path="props.path" v-slot="{ list }">
-      <p v-for="id in list">{{ id.title }}</p>
+      <NuxtLink v-for="lesson in list" :to="lesson._path">{{
+        lesson.title
+      }}</NuxtLink>
     </ContentList>
   </div>
 </template>
