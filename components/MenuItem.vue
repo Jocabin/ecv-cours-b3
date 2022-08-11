@@ -45,7 +45,7 @@ function genLinkPath(l) {
       <li v-for="subLink of link.children" :key="subLink._path">
         <NuxtLink
           class="py-2 block w-full flex flex-row items-center"
-          :to="genLinkPath(subLink)"
+          :to="subLink._path"
           @click="itemClicked(subLink)"
         >
           {{ subLink.title }}

@@ -16,6 +16,10 @@
     @apply cursor-default lg:cursor-pointer;
   }
 
+  .link {
+    @apply border-b border-blue text-blue;
+  }
+
   h1 {
     @apply font-bold text-3xl mb-4;
   }
