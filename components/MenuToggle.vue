@@ -1,9 +1,9 @@
 <script setup>
-const open = useState("open", () => false);
+const open = useState("open", () => false)
 </script>
 
 <template>
-  <button class="focus:outline-none" @click="open = !open">
+  <button @click="open = !open">
     <svg
       v-if="!open"
       viewBox="0 0 24 24"

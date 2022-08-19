@@ -4,11 +4,11 @@
 
 @layer components {
   * {
-    @apply text-black  dark:text-white;
+    @apply text-black dark:text-white;
   }
 
   #__nuxt {
-    @apply min-h-screen pt-16 flex flex-col justify-between items-center dark:bg-black bg-white;
+    @apply min-h-screen w-screen overflow-hidden pt-16 flex flex-col justify-between items-center dark:bg-black bg-white;
   }
 
   a,
