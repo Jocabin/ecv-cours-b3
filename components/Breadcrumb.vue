@@ -13,15 +13,23 @@ const crumbs = computed(() => {
 
   return final
 })
-// TODO: breadcrumbs que en mode ordi, mobile montrer un bouton retour ariere */
+// TODO: breadcrumbs que en mode ordi, mobile montrer un bouton retour ariere
 function capitalize(word) {
-  return word.charAt(0).toUpperCase() + word.slice(1)
+  return (
+    word.charAt(0).toUpperCase() + word.slice(1).toString().replaceAll("-", " ")
+  )
 }
 </script>
 
 <template>
-  <ul class="mb-6 block flex flex-row justify-start align-center flex-wrap">
-    <li v-for="link in crumbs">
+  <ul
+    class="mb-16 block flex flex-row justify-start align-center overflow-hidden flex-nowrap w-full"
+  >
+    <li
+      v-for="link in crumbs"
+      :key="link.name"
+      class="flex flex-row flex-nowrap justify-start align-center"
+    >
       <NuxtLink
         v-if="crumbs[crumbs.length - 1] != link"
         class="link"
@@ -29,7 +37,7 @@ function capitalize(word) {
       >
         {{ capitalize(link.name) }}
       </NuxtLink>
-      <span v-else>
+      <span v-else class="text-ellipsis break-normal">
         {{ capitalize(link.name) }}
       </span>
 

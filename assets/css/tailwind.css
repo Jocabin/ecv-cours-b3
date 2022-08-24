@@ -8,7 +8,8 @@
   }
 
   #__nuxt {
-    @apply min-h-screen w-screen overflow-hidden pt-16 flex flex-col justify-between items-center dark:bg-black bg-white;
+    @apply min-h-screen overflow-hidden pt-16 flex flex-col justify-between items-start dark:bg-black bg-white;
+    max-width: 100vw;
   }
 
   a,
@@ -33,6 +34,6 @@
   }
 
   p {
-    @apply mb-2;
+    @apply mb-2 break-all;
   }
 }
