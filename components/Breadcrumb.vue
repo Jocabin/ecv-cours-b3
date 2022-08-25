@@ -13,7 +13,7 @@ const crumbs = computed(() => {
 
   return final
 })
-// TODO: breadcrumbs que en mode ordi, mobile montrer un bouton retour ariere
+//TODO: fix CSS for breadcrumb
 function capitalize(word) {
   return (
     word.charAt(0).toUpperCase() + word.slice(1).toString().replaceAll("-", " ")

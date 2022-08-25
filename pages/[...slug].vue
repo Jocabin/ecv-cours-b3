@@ -1,5 +1,7 @@
 <template>
-  <main class="p-4 dark:bg-black dark:text-white w-full min-h-full grow">
+  <main
+    class="p-4 bg-white dark:bg-black dark:text-white w-full min-h-full grow overflow-hidden"
+  >
     <ContentDoc>
       <template v-slot="{ doc }">
         <Breadcrumb v-if="$route.path != '/'" />
