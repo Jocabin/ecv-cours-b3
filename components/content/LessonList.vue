@@ -1,5 +1,14 @@
 <script setup>
-const props = defineProps(["path"])
+import { capitalize } from "../../utils.js";
+
+const props = defineProps(["path"]);
+
+function isIndex(path) {
+  const splittedPaths = path.split("/");
+  const lastItem = splittedPaths[splittedPaths.length - 1];
+
+  return lastItem[0] == "_" ? true : false;
+}
 </script>
 
 <template>
@@ -10,8 +19,9 @@ const props = defineProps(["path"])
         :key="lesson._path"
         :to="lesson._path"
         class="link"
+        :class="{ hidden: isIndex(lesson._path) }"
       >
-        {{ lesson.title }}
+        {{ capitalize(lesson.title) }}
       </NuxtLink>
     </ContentList>
   </div>

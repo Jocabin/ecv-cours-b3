@@ -8,7 +8,7 @@
   }
 
   #__nuxt {
-    @apply min-h-screen overflow-hidden pt-16 flex flex-col justify-between items-start dark:bg-black bg-white;
+    @apply min-h-screen pt-16 flex flex-col justify-between items-start dark:bg-black bg-white;
     max-width: 100vw;
   }
 

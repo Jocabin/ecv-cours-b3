@@ -1,4 +1,6 @@
 <script setup>
+import {capitalize} from "../utils.js"
+
 const route = useRoute()
 const crumbs = computed(() => {
   let splittedRoute = route.fullPath.split("/")
@@ -13,22 +15,16 @@ const crumbs = computed(() => {
 
   return final
 })
-//TODO: fix CSS for breadcrumb
-function capitalize(word) {
-  return (
-    word.charAt(0).toUpperCase() + word.slice(1).toString().replaceAll("-", " ")
-  )
-}
 </script>
 
 <template>
   <ul
-    class="mb-16 block flex flex-row justify-start align-center overflow-hidden flex-nowrap w-full"
+    class="mb-16 block  w-full text-ellipsis whitespace-nowrap overflow-hidden"
   >
     <li
       v-for="link in crumbs"
       :key="link.name"
-      class="flex flex-row flex-nowrap justify-start align-center"
+      class="w-fit inline break-normal"
     >
       <NuxtLink
         v-if="crumbs[crumbs.length - 1] != link"
@@ -37,7 +33,7 @@ function capitalize(word) {
       >
         {{ capitalize(link.name) }}
       </NuxtLink>
-      <span v-else class="text-ellipsis break-normal">
+      <span v-else>
         {{ capitalize(link.name) }}
       </span>
 
