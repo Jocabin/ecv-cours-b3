@@ -19,17 +19,17 @@ const crumbs = computed(() => {
 
 <template>
   <ul
-    class="mb-16 block  w-full text-ellipsis whitespace-nowrap overflow-hidden"
+      class="mb-16 block  w-full text-ellipsis whitespace-nowrap overflow-hidden"
   >
     <li
-      v-for="link in crumbs"
-      :key="link.name"
-      class="w-fit inline break-normal"
+        v-for="link in crumbs"
+        :key="link.name"
+        class="w-fit inline break-normal"
     >
       <NuxtLink
-        v-if="crumbs[crumbs.length - 1] != link"
-        class="link"
-        :to="link.path"
+          v-if="crumbs[crumbs.length - 1] != link"
+          class="link"
+          :to="link.path"
       >
         {{ capitalize(link.name) }}
       </NuxtLink>
